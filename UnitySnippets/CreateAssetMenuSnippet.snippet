@@ -1,15 +1,32 @@
 <CodeSnippet Format="1.0.0">
-  <Header>
-    <Title>CreateAssetMenu</Title>
-    <Shortcut>cam</Shortcut>
-  </Header>
-  <Snippet>
-    <Code Language="csharp">
-      <![CDATA[
+	<Header>
+		<Title>CreateAssetMenu</Title>
+		<Shortcut>cam</Shortcut>
+		<Description>Creates a CreateAssetMenu attribute.</Description>
+		<Author>DanPie</Author>
+		<SnippetTypes>
+			<SnippetType>Expansion</SnippetType>
+		</SnippetTypes>
+	</Header>
+	<Snippet>
+		<Declarations>
+			<Literal>
+				<ID>assetType</ID>
+				<ToolTip>Enter the asset type.</ToolTip>
+				<Default>MyType</Default>
+			</Literal>
+			<Literal>
+				<ID>menuName</ID>
+				<ToolTip>Enter the context menu path.</ToolTip>
+				<Default>My/Path/</Default>
+			</Literal>
+		</Declarations>
+		<Code Language="csharp">
+			<![CDATA[
 [CreateAssetMenu(
-    fileName = nameof($itemType$),
-    menuName = $menuPath$ + nameof($itemType$))]
+    fileName = nameof($assetType$), 
+    menuName = "$menuName$" + nameof($assetType$))]
       ]]>
-    </Code>
-  </Snippet>
+		</Code>
+	</Snippet>
 </CodeSnippet>
