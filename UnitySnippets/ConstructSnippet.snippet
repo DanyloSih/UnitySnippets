@@ -23,12 +23,12 @@
 		</Declarations>
 		<Code Language="csharp">
 			<![CDATA[
-			private $typeName$ _$fieldName$;
+			private $typeName$ _$argumentName$;
 			
 			[Inject]
-			public void Construct($typeName$ $fieldName$)
+			public void Construct($typeName$ $argumentName$)
 			{
-				_$fieldName$ = $fieldName$;
+				_$argumentName$ = $argumentName$;
 			}]]>
 		</Code>
 		<Imports>
