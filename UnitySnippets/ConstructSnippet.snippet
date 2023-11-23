@@ -1,0 +1,40 @@
+<CodeSnippet Format="1.0.0">
+	<Header>
+		<Title>Zenject Construct Method</Title>
+		<Shortcut>ctc</Shortcut>
+		<Description>Creates method with Inject attribute and have one argument.</Description>
+		<Author>DanPie</Author>
+		<SnippetTypes>
+			<SnippetType>Expansion</SnippetType>
+		</SnippetTypes>
+	</Header>
+	<Snippet>
+		<Declarations>
+			<Literal>
+				<ID>typeName</ID>
+				<ToolTip>Enter the argument type.</ToolTip>
+				<Default>typeName</Default>
+			</Literal>
+			<Literal>
+				<ID>argumentName</ID>
+				<ToolTip>Enter the argument name.</ToolTip>
+				<Default>argumentName</Default>
+			</Literal>
+		</Declarations>
+		<Code Language="csharp">
+			<![CDATA[
+			private $typeName$ _$fieldName$;
+			
+			[Inject]
+			public void Construct($typeName$ $fieldName$)
+			{
+				_$fieldName$ = $fieldName$;
+			}]]>
+		</Code>
+		<Imports>
+			<Import>
+				<Namespace>Zenject</Namespace>
+			</Import>
+		</Imports>
+	</Snippet>
+</CodeSnippet>
